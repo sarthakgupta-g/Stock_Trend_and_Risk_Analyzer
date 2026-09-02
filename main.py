@@ -34,3 +34,7 @@ plt.show()
 data["Peak"]=data["Price"].cummax()
 
 print(data[["Price","Peak"]])
+
+data["Drawdown"]=(data["Price"]-data["Peak"])/data["Peak"]
+print(data[["Date","Price","Peak","Drawdown"]])
+
