@@ -18,4 +18,8 @@ plt.xlabel("Date")
 plt.ylabel("Price and Rolling Averages (Dollars)")
 plt.title("Changes in Price and Rolling Averages over 60 Days")
 plt.legend()
+
+print(data.columns)
+print(data[["Date", "Price", "MA5", "MA20"]].head())
+
 plt.show
