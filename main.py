@@ -2,13 +2,13 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 data=pd.read_csv("stock_data.csv")
-data.head(5)
-data.shape
-data.info()
+print(data.head(5))
+print(data.shape)
+print(data.info())
 
 data["MA5"]=data["Price"].rolling(5).mean()
 data["MA20"]=data["Price"].rolling(20).mean()
-data[["Date","Price","MA5","MA20"]].tail(10)
+print(data[["Date","Price","MA5","MA20"]].tail(10))
 
 
 
@@ -30,3 +30,7 @@ plt.ylabel("Rolling Volatility")
 plt.title("Change in Rolling Volatility over 60 Days")
 plt.legend()
 plt.show()
+
+data["Peak"]=data["Price"].cummax()
+
+print(data[["Price","Peak"]])
