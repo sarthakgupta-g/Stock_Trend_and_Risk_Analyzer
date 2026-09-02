@@ -11,6 +11,9 @@ data["MA20"]=data["Price"].rolling(20).mean()
 data[["Date","Price","MA5","MA20"]].tail(10)
 
 
+plt.plot(data["Price"])
+plt.show()
+
 print("ABOUT TO GRAPH")
 
 plt.plot(data["Date"],data["Price"],label="Price")
