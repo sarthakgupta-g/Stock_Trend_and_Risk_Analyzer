@@ -1,5 +1,4 @@
 # Stock_trend_and_risk_analyzer
-# Project 3 — Stock Trend & Risk Analysis
 
 ## Overview
 
