@@ -57,6 +57,13 @@ plt.title("Looking at Volume of Stocks Traded over the Course of 60 Days")
 plt.legend()
 plt.show()
 
-data["Signal"]=np.where(data["MA5"]>data["MA20"], 1, 0)
+data["Signal"]=np.where(data["MA20"].isna(), np.nan, np.where(data["MA5"]>data["MA20"], 1, 0))
 print(data[["Date","MA5","MA20","Signal"]])
+
+
+data["Next_day_return"]=data["Return"].shift(-1)
+print(data[["Date","Return","Signal","Next_day_return"]])
+
+
+
 
