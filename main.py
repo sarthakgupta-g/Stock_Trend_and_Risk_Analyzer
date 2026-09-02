@@ -38,3 +38,12 @@ print(data[["Price","Peak"]])
 data["Drawdown"]=(data["Price"]-data["Peak"])/data["Peak"]
 print(data[["Date","Price","Peak","Drawdown"]])
 
+max_drawdown=data["Drawdown"].min()
+
+plt.figure()
+plt.plot(data["Date"],data["Drawdown"],legend="drawdown")
+plt.xlabel("Date")
+plt.ylabel("Drawdowns")
+plt.title("Looking at Drawdowns over the Course of 60 Days")
+plt.legend()
+plt.show()
