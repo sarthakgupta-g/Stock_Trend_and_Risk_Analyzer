@@ -1,5 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import numpy as np
 
 data=pd.read_csv("stock_data.csv")
 print(data.head(5))
