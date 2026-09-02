@@ -10,6 +10,9 @@ data["MA5"]=data["Price"].rolling(5).mean()
 data["MA20"]=data["Price"].rolling(20).mean()
 data[["Date","Price","MA5","MA20"]].tail(10)
 
+plt.plot([1, 2, 3, 4, 5])
+plt.show()
+
 plt.plot(data["Date"],data["Price"],label="Price")
 plt.plot(data["Date"],data["MA5"],label="MA5")
 plt.plot(data["Date"],data["MA20"],label="MA20")
