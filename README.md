@@ -1,4 +1,4 @@
-# Stock_trend_and_risk_analyzer
+# Stock_Trend_and_Risk_Analyzer
 
 ## Overview
 
