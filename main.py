@@ -64,6 +64,9 @@ print(data[["Date","MA5","MA20","Signal"]])
 data["Next_day_return"]=data["Daily_return"].shift(-1)
 print(data[["Date","Daily_return","Signal","Next_day_return"]])
 
+print(data[data["Signal"] == 1]["Next_day_return"].mean())
+print(data[data["Signal"] == 0]["Next_day_return"].mean())
+
 
 
 
