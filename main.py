@@ -55,3 +55,7 @@ plt.ylabel("Volume")
 plt.title("Looking at Volume of Stocks Traded over the Course of 60 Days")
 plt.legend()
 plt.show()
+
+data["Signal"]=np.where(data["MA5"]>data["MA20"], 1, 0)
+print(data[["Date","MA5","MA20","Signal"]])
+
