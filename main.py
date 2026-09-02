@@ -66,7 +66,7 @@ print(data[["Date","Daily_return","Signal","Next_day_return"]])
 
 print(data[data["Signal"] == 1]["Next_day_return"].mean())
 print(data[data["Signal"] == 0]["Next_day_return"].mean())
-
+print(data["Signal"].value_counts())
 
 
 
