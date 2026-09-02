@@ -24,6 +24,7 @@ plt.show()
 
 plt.figure()
 plt.plot(data["Date"],data["Rolling_volatility"],label="Rolling_volatility")
+plt.plot(data["Date"],data["Price"],label="Price")
 plt.xlabel("Date")
 plt.ylabel("Rolling Volatility")
 plt.title("Change in Rolling Volatility over 60 Days")
